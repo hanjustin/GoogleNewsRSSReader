@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3624DDE01B7B09B200476954 /* Blank.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3624DDDF1B7B09B200476954 /* Blank.jpg */; };
+		3624DDE21B7B0FA400476954 /* GoogleNewsArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624DDE11B7B0FA400476954 /* GoogleNewsArticleViewController.swift */; };
+		3625C92A1B7CD53B0002648D /* RSSTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364292621B77EE8300FCEF06 /* RSSTableViewController.swift */; };
+		3625C92B1B7CD8BD0002648D /* RSSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364292641B77EEC700FCEF06 /* RSSParser.swift */; };
+		364292311B77ED1E00FCEF06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364292301B77ED1E00FCEF06 /* AppDelegate.swift */; };
+		364292341B77ED1E00FCEF06 /* GoogleNewsRSSReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 364292321B77ED1E00FCEF06 /* GoogleNewsRSSReader.xcdatamodeld */; };
+		364292391B77ED1E00FCEF06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 364292371B77ED1E00FCEF06 /* Main.storyboard */; };
+		3642923B1B77ED1F00FCEF06 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3642923A1B77ED1F00FCEF06 /* Images.xcassets */; };
+		3642923E1B77ED1F00FCEF06 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3642923C1B77ED1F00FCEF06 /* LaunchScreen.xib */; };
+		3642924A1B77ED1F00FCEF06 /* GoogleNewsRSSReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364292491B77ED1F00FCEF06 /* GoogleNewsRSSReaderTests.swift */; };
+		364292571B77EDB100FCEF06 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 364292551B77EDB100FCEF06 /* TFHpple.m */; };
+		364292581B77EDB100FCEF06 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 364292561B77EDB100FCEF06 /* XPathQuery.m */; };
+		3642925D1B77EDC600FCEF06 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 3642925B1B77EDC600FCEF06 /* TFHppleElement.m */; };
+		3642925F1B77EDF500FCEF06 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3642925E1B77EDF500FCEF06 /* libxml2.dylib */; };
+		364292631B77EE8300FCEF06 /* RSSTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364292621B77EE8300FCEF06 /* RSSTableViewController.swift */; };
+		364292651B77EEC700FCEF06 /* RSSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364292641B77EEC700FCEF06 /* RSSParser.swift */; };
+		364292671B77F44700FCEF06 /* GoogleNewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364292661B77F44700FCEF06 /* GoogleNewsItem.swift */; };
+		364292691B780CDB00FCEF06 /* GoogleNewsItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364292681B780CDB00FCEF06 /* GoogleNewsItemTests.swift */; };
+		364292721B7811FC00FCEF06 /* SampleDescriptionHTML.txt in Resources */ = {isa = PBXBuildFile; fileRef = 364292711B7811FC00FCEF06 /* SampleDescriptionHTML.txt */; };
+		364292731B78157500FCEF06 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 3642925B1B77EDC600FCEF06 /* TFHppleElement.m */; };
+		364292741B78157700FCEF06 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 364292561B77EDB100FCEF06 /* XPathQuery.m */; };
+		364292751B78157900FCEF06 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 364292551B77EDB100FCEF06 /* TFHpple.m */; };
+		364292761B7815B600FCEF06 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3642925E1B77EDF500FCEF06 /* libxml2.dylib */; };
+		364292781B781A6C00FCEF06 /* SampleDescriptionHTML.txt in Resources */ = {isa = PBXBuildFile; fileRef = 364292711B7811FC00FCEF06 /* SampleDescriptionHTML.txt */; };
+		3642927B1B785F4500FCEF06 /* GoogleNewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364292661B77F44700FCEF06 /* GoogleNewsItem.swift */; };
+		36C5AAD91B7C7C2D002A4D23 /* GoogleNewsArticleViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C5AAD81B7C7C2D002A4D23 /* GoogleNewsArticleViewTests.swift */; };
+		36C5AADA1B7C7C7B002A4D23 /* GoogleNewsArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624DDE11B7B0FA400476954 /* GoogleNewsArticleViewController.swift */; };
+		36C5AADE1B7C9C82002A4D23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 364292371B77ED1E00FCEF06 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		364292441B77ED1F00FCEF06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 364292231B77ED1E00FCEF06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3642922A1B77ED1E00FCEF06;
+			remoteInfo = GoogleNewsRSSReader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3624DDDF1B7B09B200476954 /* Blank.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Blank.jpg; sourceTree = "<group>"; };
+		3624DDE11B7B0FA400476954 /* GoogleNewsArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleNewsArticleViewController.swift; sourceTree = "<group>"; };
+		3642922B1B77ED1E00FCEF06 /* GoogleNewsRSSReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleNewsRSSReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3642922F1B77ED1E00FCEF06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		364292301B77ED1E00FCEF06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		364292331B77ED1E00FCEF06 /* GoogleNewsRSSReader.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GoogleNewsRSSReader.xcdatamodel; sourceTree = "<group>"; };
+		364292381B77ED1E00FCEF06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3642923A1B77ED1F00FCEF06 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3642923D1B77ED1F00FCEF06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		364292431B77ED1F00FCEF06 /* GoogleNewsRSSReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoogleNewsRSSReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		364292481B77ED1F00FCEF06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		364292491B77ED1F00FCEF06 /* GoogleNewsRSSReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleNewsRSSReaderTests.swift; sourceTree = "<group>"; };
+		364292541B77EDB100FCEF06 /* GoogleNewsRSSReader-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoogleNewsRSSReader-Bridging-Header.h"; sourceTree = "<group>"; };
+		364292551B77EDB100FCEF06 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFHpple.m; path = "TFHpple Framework/TFHpple.m"; sourceTree = "<group>"; };
+		364292561B77EDB100FCEF06 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XPathQuery.m; path = "TFHpple Framework/XPathQuery.m"; sourceTree = "<group>"; };
+		364292591B77EDC600FCEF06 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFHpple.h; path = "TFHpple Framework/TFHpple.h"; sourceTree = "<group>"; };
+		3642925A1B77EDC600FCEF06 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TFHppleElement.h; path = "TFHpple Framework/TFHppleElement.h"; sourceTree = "<group>"; };
+		3642925B1B77EDC600FCEF06 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TFHppleElement.m; path = "TFHpple Framework/TFHppleElement.m"; sourceTree = "<group>"; };
+		3642925C1B77EDC600FCEF06 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XPathQuery.h; path = "TFHpple Framework/XPathQuery.h"; sourceTree = "<group>"; };
+		3642925E1B77EDF500FCEF06 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		364292621B77EE8300FCEF06 /* RSSTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSTableViewController.swift; sourceTree = "<group>"; };
+		364292641B77EEC700FCEF06 /* RSSParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSParser.swift; sourceTree = "<group>"; };
+		364292661B77F44700FCEF06 /* GoogleNewsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleNewsItem.swift; sourceTree = "<group>"; };
+		364292681B780CDB00FCEF06 /* GoogleNewsItemTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleNewsItemTests.swift; sourceTree = "<group>"; };
+		364292711B7811FC00FCEF06 /* SampleDescriptionHTML.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SampleDescriptionHTML.txt; sourceTree = "<group>"; };
+		36C5AAD81B7C7C2D002A4D23 /* GoogleNewsArticleViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleNewsArticleViewTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		364292281B77ED1E00FCEF06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3642925F1B77EDF500FCEF06 /* libxml2.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		364292401B77ED1F00FCEF06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				364292761B7815B600FCEF06 /* libxml2.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		364292221B77ED1E00FCEF06 = {
+			isa = PBXGroup;
+			children = (
+				3642925E1B77EDF500FCEF06 /* libxml2.dylib */,
+				3642922D1B77ED1E00FCEF06 /* GoogleNewsRSSReader */,
+				364292461B77ED1F00FCEF06 /* GoogleNewsRSSReaderTests */,
+				3642922C1B77ED1E00FCEF06 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3642922C1B77ED1E00FCEF06 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3642922B1B77ED1E00FCEF06 /* GoogleNewsRSSReader.app */,
+				364292431B77ED1F00FCEF06 /* GoogleNewsRSSReaderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3642922D1B77ED1E00FCEF06 /* GoogleNewsRSSReader */ = {
+			isa = PBXGroup;
+			children = (
+				364292531B77ED9400FCEF06 /* TFHpple Framework */,
+				364292301B77ED1E00FCEF06 /* AppDelegate.swift */,
+				364292621B77EE8300FCEF06 /* RSSTableViewController.swift */,
+				3624DDE11B7B0FA400476954 /* GoogleNewsArticleViewController.swift */,
+				364292641B77EEC700FCEF06 /* RSSParser.swift */,
+				364292661B77F44700FCEF06 /* GoogleNewsItem.swift */,
+				364292371B77ED1E00FCEF06 /* Main.storyboard */,
+				3642923A1B77ED1F00FCEF06 /* Images.xcassets */,
+				3642923C1B77ED1F00FCEF06 /* LaunchScreen.xib */,
+				364292321B77ED1E00FCEF06 /* GoogleNewsRSSReader.xcdatamodeld */,
+				3642922E1B77ED1E00FCEF06 /* Supporting Files */,
+			);
+			path = GoogleNewsRSSReader;
+			sourceTree = "<group>";
+		};
+		3642922E1B77ED1E00FCEF06 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3624DDDF1B7B09B200476954 /* Blank.jpg */,
+				3642922F1B77ED1E00FCEF06 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		364292461B77ED1F00FCEF06 /* GoogleNewsRSSReaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				364292711B7811FC00FCEF06 /* SampleDescriptionHTML.txt */,
+				364292491B77ED1F00FCEF06 /* GoogleNewsRSSReaderTests.swift */,
+				364292681B780CDB00FCEF06 /* GoogleNewsItemTests.swift */,
+				36C5AAD81B7C7C2D002A4D23 /* GoogleNewsArticleViewTests.swift */,
+				364292471B77ED1F00FCEF06 /* Supporting Files */,
+			);
+			path = GoogleNewsRSSReaderTests;
+			sourceTree = "<group>";
+		};
+		364292471B77ED1F00FCEF06 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				364292481B77ED1F00FCEF06 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		364292531B77ED9400FCEF06 /* TFHpple Framework */ = {
+			isa = PBXGroup;
+			children = (
+				364292591B77EDC600FCEF06 /* TFHpple.h */,
+				3642925A1B77EDC600FCEF06 /* TFHppleElement.h */,
+				3642925B1B77EDC600FCEF06 /* TFHppleElement.m */,
+				3642925C1B77EDC600FCEF06 /* XPathQuery.h */,
+				364292551B77EDB100FCEF06 /* TFHpple.m */,
+				364292561B77EDB100FCEF06 /* XPathQuery.m */,
+				364292541B77EDB100FCEF06 /* GoogleNewsRSSReader-Bridging-Header.h */,
+			);
+			name = "TFHpple Framework";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3642922A1B77ED1E00FCEF06 /* GoogleNewsRSSReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3642924D1B77ED1F00FCEF06 /* Build configuration list for PBXNativeTarget "GoogleNewsRSSReader" */;
+			buildPhases = (
+				364292271B77ED1E00FCEF06 /* Sources */,
+				364292281B77ED1E00FCEF06 /* Frameworks */,
+				364292291B77ED1E00FCEF06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoogleNewsRSSReader;
+			productName = GoogleNewsRSSReader;
+			productReference = 3642922B1B77ED1E00FCEF06 /* GoogleNewsRSSReader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		364292421B77ED1F00FCEF06 /* GoogleNewsRSSReaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 364292501B77ED1F00FCEF06 /* Build configuration list for PBXNativeTarget "GoogleNewsRSSReaderTests" */;
+			buildPhases = (
+				3642923F1B77ED1F00FCEF06 /* Sources */,
+				364292401B77ED1F00FCEF06 /* Frameworks */,
+				364292411B77ED1F00FCEF06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				364292451B77ED1F00FCEF06 /* PBXTargetDependency */,
+			);
+			name = GoogleNewsRSSReaderTests;
+			productName = GoogleNewsRSSReaderTests;
+			productReference = 364292431B77ED1F00FCEF06 /* GoogleNewsRSSReaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		364292231B77ED1E00FCEF06 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Justin Lee";
+				TargetAttributes = {
+					3642922A1B77ED1E00FCEF06 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					364292421B77ED1F00FCEF06 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 3642922A1B77ED1E00FCEF06;
+					};
+				};
+			};
+			buildConfigurationList = 364292261B77ED1E00FCEF06 /* Build configuration list for PBXProject "GoogleNewsRSSReader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 364292221B77ED1E00FCEF06;
+			productRefGroup = 3642922C1B77ED1E00FCEF06 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3642922A1B77ED1E00FCEF06 /* GoogleNewsRSSReader */,
+				364292421B77ED1F00FCEF06 /* GoogleNewsRSSReaderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		364292291B77ED1E00FCEF06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3624DDE01B7B09B200476954 /* Blank.jpg in Resources */,
+				364292391B77ED1E00FCEF06 /* Main.storyboard in Resources */,
+				3642923E1B77ED1F00FCEF06 /* LaunchScreen.xib in Resources */,
+				364292781B781A6C00FCEF06 /* SampleDescriptionHTML.txt in Resources */,
+				3642923B1B77ED1F00FCEF06 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		364292411B77ED1F00FCEF06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				364292721B7811FC00FCEF06 /* SampleDescriptionHTML.txt in Resources */,
+				36C5AADE1B7C9C82002A4D23 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		364292271B77ED1E00FCEF06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				364292671B77F44700FCEF06 /* GoogleNewsItem.swift in Sources */,
+				3642925D1B77EDC600FCEF06 /* TFHppleElement.m in Sources */,
+				3624DDE21B7B0FA400476954 /* GoogleNewsArticleViewController.swift in Sources */,
+				364292341B77ED1E00FCEF06 /* GoogleNewsRSSReader.xcdatamodeld in Sources */,
+				364292631B77EE8300FCEF06 /* RSSTableViewController.swift in Sources */,
+				364292581B77EDB100FCEF06 /* XPathQuery.m in Sources */,
+				364292311B77ED1E00FCEF06 /* AppDelegate.swift in Sources */,
+				364292651B77EEC700FCEF06 /* RSSParser.swift in Sources */,
+				364292571B77EDB100FCEF06 /* TFHpple.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3642923F1B77ED1F00FCEF06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				364292731B78157500FCEF06 /* TFHppleElement.m in Sources */,
+				364292751B78157900FCEF06 /* TFHpple.m in Sources */,
+				3642927B1B785F4500FCEF06 /* GoogleNewsItem.swift in Sources */,
+				364292691B780CDB00FCEF06 /* GoogleNewsItemTests.swift in Sources */,
+				364292741B78157700FCEF06 /* XPathQuery.m in Sources */,
+				36C5AADA1B7C7C7B002A4D23 /* GoogleNewsArticleViewController.swift in Sources */,
+				3642924A1B77ED1F00FCEF06 /* GoogleNewsRSSReaderTests.swift in Sources */,
+				36C5AAD91B7C7C2D002A4D23 /* GoogleNewsArticleViewTests.swift in Sources */,
+				3625C92A1B7CD53B0002648D /* RSSTableViewController.swift in Sources */,
+				3625C92B1B7CD8BD0002648D /* RSSParser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		364292451B77ED1F00FCEF06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3642922A1B77ED1E00FCEF06 /* GoogleNewsRSSReader */;
+			targetProxy = 364292441B77ED1F00FCEF06 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		364292371B77ED1E00FCEF06 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				364292381B77ED1E00FCEF06 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3642923C1B77ED1F00FCEF06 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3642923D1B77ED1F00FCEF06 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3642924B1B77ED1F00FCEF06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3642924C1B77ED1F00FCEF06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3642924E1B77ED1F00FCEF06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDKROOT)/usr/include/libxml2",
+				);
+				INFOPLIST_FILE = GoogleNewsRSSReader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoogleNewsRSSReader/GoogleNewsRSSReader-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3642924F1B77ED1F00FCEF06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDKROOT)/usr/include/libxml2",
+				);
+				INFOPLIST_FILE = GoogleNewsRSSReader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoogleNewsRSSReader/GoogleNewsRSSReader-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		364292511B77ED1F00FCEF06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDKROOT)/usr/include/libxml2",
+				);
+				INFOPLIST_FILE = GoogleNewsRSSReaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoogleNewsRSSReader/GoogleNewsRSSReader-Bridging-Header.h";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoogleNewsRSSReader.app/GoogleNewsRSSReader";
+			};
+			name = Debug;
+		};
+		364292521B77ED1F00FCEF06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDKROOT)/usr/include/libxml2",
+				);
+				INFOPLIST_FILE = GoogleNewsRSSReaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoogleNewsRSSReader/GoogleNewsRSSReader-Bridging-Header.h";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoogleNewsRSSReader.app/GoogleNewsRSSReader";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		364292261B77ED1E00FCEF06 /* Build configuration list for PBXProject "GoogleNewsRSSReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3642924B1B77ED1F00FCEF06 /* Debug */,
+				3642924C1B77ED1F00FCEF06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3642924D1B77ED1F00FCEF06 /* Build configuration list for PBXNativeTarget "GoogleNewsRSSReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3642924E1B77ED1F00FCEF06 /* Debug */,
+				3642924F1B77ED1F00FCEF06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		364292501B77ED1F00FCEF06 /* Build configuration list for PBXNativeTarget "GoogleNewsRSSReaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				364292511B77ED1F00FCEF06 /* Debug */,
+				364292521B77ED1F00FCEF06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		364292321B77ED1E00FCEF06 /* GoogleNewsRSSReader.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				364292331B77ED1E00FCEF06 /* GoogleNewsRSSReader.xcdatamodel */,
+			);
+			currentVersion = 364292331B77ED1E00FCEF06 /* GoogleNewsRSSReader.xcdatamodel */;
+			path = GoogleNewsRSSReader.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 364292231B77ED1E00FCEF06 /* Project object */;
+}
