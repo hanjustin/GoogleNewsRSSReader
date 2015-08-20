@@ -22,8 +22,8 @@ class GoogleNewsItemTests: XCTestCase {
             let textData = String(contentsOfFile: path, encoding: NSUTF8StringEncoding, error: nil)!
             descriptionHTMLSamples = textData.componentsSeparatedByString("\n")
             
-            testItemWithImage = GoogleNewsItem(title: title, descriptionHTML: descriptionHTMLSamples[0])
-            testItemNoImage = GoogleNewsItem(title: title, descriptionHTML: descriptionHTMLSamples[1])
+            testItemWithImage = GoogleNewsItem(title: title, descriptionHTML: descriptionHTMLSamples[0], pubDate: "")
+            testItemNoImage = GoogleNewsItem(title: title, descriptionHTML: descriptionHTMLSamples[1], pubDate: "")
         } else {
             XCTFail("Test initialization failed: SampleDescriptionHTML.txt not found")
         }

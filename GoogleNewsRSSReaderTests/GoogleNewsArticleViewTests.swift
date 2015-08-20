@@ -11,7 +11,7 @@ class GoogleNewsArticleViewTests: XCTestCase {
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle(forClass: self.dynamicType))
         testArticleView = storyboard.instantiateViewControllerWithIdentifier("GoogleNewsArticle") as! GoogleNewsArticleViewController
         let descriptionHTML = "<a id=\"testLink\" href=\"http://www.google.com\">Google</a>"
-        testArticleView.newsItem = GoogleNewsItem(title: "Title", descriptionHTML: descriptionHTML)
+        testArticleView.newsItem = GoogleNewsItem(title: "Title", descriptionHTML: descriptionHTML, pubDate: "")
         let initialize = testArticleView.view
         testArticleView.viewDidLoad()
     }

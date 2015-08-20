@@ -9,18 +9,29 @@ class RSSTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let success = parser.parse()
-        
-        if !success {
-            println("Failed getting RSS from the source")
-            return
-        }
-        
-        RSSdataList = parser.googleNewsList
         
         tableView.estimatedRowHeight = 22
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.reloadData()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        
+        dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INTERACTIVE, 0)) {
+            let hasNetwork = isConnectedToNetwork()
+            
+            if hasNetwork {
+                self.parser.parse()
+            }
+            self.RSSdataList = self.parser.getGoogleNewsList
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+                self.tableView.reloadData()
+            }
+        }
     }
     
     // MARK: - Table view data source
