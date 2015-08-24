@@ -1,5 +1,5 @@
 # GoogleNewsRSSReader
-News list shown by parsing Google News RSS feed. Downloaded RSS data is cached through Core Data for offline use.
+News list shown by parsing Google News RSS feed. Downloaded RSS data is cached through Core Data for offline mode.
 
 Framework used: TFhpple
 
@@ -11,10 +11,8 @@ Framework used: TFhpple
 
 # Test Files
 
-All test classes are inside GoogleNewsRSSReaderTests folder
+Test cases are incomplete. Test cases will not run due to issues.
 
-# To be implemented
+# Not suppported
 
-<b>Caching images for table list<b>
-
-<b>Caching articles in UIWebView<b>
+Caching articles in UIWebView for offline use
