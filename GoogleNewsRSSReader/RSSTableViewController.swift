@@ -5,33 +5,43 @@ class RSSTableViewController: UITableViewController {
     
     let parser = GoogleNewsRSSParser()
     var RSSdataList = [GoogleNewsItem]()
-    var imagesCache = [String:UIImage]()
+    var connectedToNetwork = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.estimatedRowHeight = 22
-        tableView.rowHeight = UITableViewAutomaticDimension
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         
         dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INTERACTIVE, 0)) {
-            let hasNetwork = isConnectedToNetwork()
+            self.connectedToNetwork = isConnectedToNetwork()
             
-            if hasNetwork {
-                self.parser.parse()
+            var parseSuccess = false
+            if self.connectedToNetwork {
+                parseSuccess = self.parser.parse()
             }
             self.RSSdataList = self.parser.getGoogleNewsList
             
             dispatch_async(dispatch_get_main_queue()) {
                 UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+                
+                if !self.connectedToNetwork {
+                    self.showMsgPopUp("No Internet access. Loading last successful RSS data")
+                } else if !parseSuccess && self.connectedToNetwork {
+                    self.showMsgPopUp("Error while fetching RSS data. Loading last successful RSS data")
+                }
+                
                 self.tableView.reloadData()
             }
         }
+        
+        tableView.estimatedRowHeight = 22
+        tableView.rowHeight = UITableViewAutomaticDimension
+    }
+    
+    private func showMsgPopUp(message: String) {
+        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
     // MARK: - Table view data source
@@ -48,28 +58,30 @@ class RSSTableViewController: UITableViewController {
         cell.detailTextLabel?.text = newsItem.summary
         
         // Use cached image or download new image for the cell
-        if let imgURLString = newsItem.imgURL, let cachedImage = imagesCache[imgURLString] {
+        if let imgURLString = newsItem.imgURL, let cachedImage = newsItem.thumbNailImg {
             cell.imageView?.image = cachedImage
             
-        } else if let imgURLString = newsItem.imgURL {
-            
+        } else if let imgURLString = newsItem.imgURL where connectedToNetwork {
             // Need to set a blank image to the imageView to show the downloaded image
             let blank = UIImage(named: "Blank.jpg")
             var tempImage = CGImageCreateWithImageInRect(blank?.CGImage!, CGRect(x: 0, y: 0, width: 80, height: 80))
             cell.imageView?.image = UIImage(CGImage: tempImage)
             
             dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INTERACTIVE, 0)) {
-                var downloadedImg = UIImage()
+                var thumbNailImg = UIImage()
                 
-                if let imgURL = NSURL(string: imgURLString), let imgData = NSData(contentsOfURL: imgURL), let img = UIImage(data: imgData) {
-                    downloadedImg = img
+                if let imgURL = NSURL(string: imgURLString), let imgData = NSData(contentsOfURL: imgURL), let downloadedImg = UIImage(data: imgData) {
+                    thumbNailImg = downloadedImg
                 } else {
                     println("Error while downloading img")
                 }
                 
                 dispatch_async(dispatch_get_main_queue()) {
                     if let cellToUpdate = tableView.cellForRowAtIndexPath(indexPath) {
-                        cellToUpdate.imageView?.image = downloadedImg
+                        newsItem.thumbNailImg = thumbNailImg
+                        cellToUpdate.imageView?.image = thumbNailImg
+                        let context = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext!
+                        context.save(nil)
                     }
                 }
             }

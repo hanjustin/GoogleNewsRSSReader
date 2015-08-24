@@ -16,6 +16,7 @@ class GoogleNewsArticleViewController: UIViewController {
         super.viewDidLoad()
         loadWebViews()
         relatedLinksWebView.delegate = self
+        storyArticleWebView.delegate = self
         storyArticleWebView.hidden = true
     }
     
@@ -45,3 +46,4 @@ extension GoogleNewsArticleViewController: UIWebViewDelegate {
         return false
     }
 }
+

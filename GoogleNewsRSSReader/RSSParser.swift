@@ -28,6 +28,7 @@ class GoogleNewsRSSParser: NSObject, NSXMLParserDelegate {
         
         let success = parser.parse()
         
+        // Fetch new RSS data or get saved data
         if success {
             clearCoreData()
             context.save(nil)

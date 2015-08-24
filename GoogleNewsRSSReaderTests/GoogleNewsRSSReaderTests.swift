@@ -2,6 +2,10 @@
 import UIKit
 import XCTest
 
+// VERY INCOMPLETE
+// Some test codes will not even run.
+// Many test cases are not implemented. Still learning how to properly test iOS application code.
+
 class GoogleNewsRSSReaderTests: XCTestCase {
     
     var testVC: RSSTableViewController!
@@ -25,24 +29,19 @@ class GoogleNewsRSSReaderTests: XCTestCase {
         }
     }
     
-    func testImagesOnTableCells() {
-        testVC.RSSdataList[0].imgURL = "https://www.google.com/images/srpr/logo11w.png"
-        testVC.RSSdataList[1].imgURL = nil
-        testVC.imagesCache = [String:UIImage]()
-        
-        testVC.tableView.reloadData()
-        let cells = testVC.tableView.visibleCells() as! [UITableViewCell]
-        
-        XCTAssertNotNil(cells[0].imageView?.image, "Cell's image should not be nil for news item with imgURL")
-        XCTAssertNil(cells[1].imageView?.image, "Cell's image should be nil for news item without imgURL")
-    }
-    
     func testRSSParseSuccess() {
         XCTAssertTrue(testVC.RSSdataList.count > 0, "Successful parse is expected to have more than 1 data result")
+        // There should be no popup
         // TableView should be also reloaded.
     }
     
     func testRSSParseFailure() {
-        // To be implemented. Decide what to do when it failed.
+        // A popup with the RSS parse failure message should be shown.
+        // Last successful RSS data should be shown
+    }
+    
+    func testNoNetworkConnection() {
+        // A popup with the 'No Internet' message should be shown.
+        // Last successful RSS data should be shown
     }
 }

@@ -10,10 +10,12 @@
 		3624DDE01B7B09B200476954 /* Blank.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3624DDDF1B7B09B200476954 /* Blank.jpg */; };
 		3624DDE21B7B0FA400476954 /* GoogleNewsArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624DDE11B7B0FA400476954 /* GoogleNewsArticleViewController.swift */; };
 		36257BB21B842AD500AC39E5 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36257BB11B842AD500AC39E5 /* Common.swift */; };
-		36257BB41B842C2400AC39E5 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36257BB11B842AD500AC39E5 /* Common.swift */; };
-		3625C92A1B7CD53B0002648D /* RSSTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364292621B77EE8300FCEF06 /* RSSTableViewController.swift */; };
-		3625C92B1B7CD8BD0002648D /* RSSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364292641B77EEC700FCEF06 /* RSSParser.swift */; };
-		36410FF81B8468AD00B4C28E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364292301B77ED1E00FCEF06 /* AppDelegate.swift */; };
+		3633486F1B8B0206002BB21F /* GoogleNewsArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624DDE11B7B0FA400476954 /* GoogleNewsArticleViewController.swift */; };
+		363348731B8B032C002BB21F /* RSSTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364292621B77EE8300FCEF06 /* RSSTableViewController.swift */; };
+		363348741B8B032E002BB21F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364292301B77ED1E00FCEF06 /* AppDelegate.swift */; };
+		363348751B8B0331002BB21F /* RSSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364292641B77EEC700FCEF06 /* RSSParser.swift */; };
+		363348761B8B0333002BB21F /* GoogleNewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364292661B77F44700FCEF06 /* GoogleNewsItem.swift */; };
+		363348771B8B0335002BB21F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36257BB11B842AD500AC39E5 /* Common.swift */; };
 		36410FF91B846D4400B4C28E /* GoogleNewsRSSReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 364292321B77ED1E00FCEF06 /* GoogleNewsRSSReader.xcdatamodeld */; };
 		364292311B77ED1E00FCEF06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364292301B77ED1E00FCEF06 /* AppDelegate.swift */; };
 		364292341B77ED1E00FCEF06 /* GoogleNewsRSSReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 364292321B77ED1E00FCEF06 /* GoogleNewsRSSReader.xcdatamodeld */; };
@@ -35,9 +37,7 @@
 		364292751B78157900FCEF06 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 364292551B77EDB100FCEF06 /* TFHpple.m */; };
 		364292761B7815B600FCEF06 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3642925E1B77EDF500FCEF06 /* libxml2.dylib */; };
 		364292781B781A6C00FCEF06 /* SampleDescriptionHTML.txt in Resources */ = {isa = PBXBuildFile; fileRef = 364292711B7811FC00FCEF06 /* SampleDescriptionHTML.txt */; };
-		3642927B1B785F4500FCEF06 /* GoogleNewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364292661B77F44700FCEF06 /* GoogleNewsItem.swift */; };
 		36C5AAD91B7C7C2D002A4D23 /* GoogleNewsArticleViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C5AAD81B7C7C2D002A4D23 /* GoogleNewsArticleViewTests.swift */; };
-		36C5AADA1B7C7C7B002A4D23 /* GoogleNewsArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3624DDE11B7B0FA400476954 /* GoogleNewsArticleViewController.swift */; };
 		36C5AADE1B7C9C82002A4D23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 364292371B77ED1E00FCEF06 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +55,7 @@
 		3624DDDF1B7B09B200476954 /* Blank.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Blank.jpg; sourceTree = "<group>"; };
 		3624DDE11B7B0FA400476954 /* GoogleNewsArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleNewsArticleViewController.swift; sourceTree = "<group>"; };
 		36257BB11B842AD500AC39E5 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		3628F6E21B89A6A3009E531D /* GoogleNewsRSSReaderV2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GoogleNewsRSSReaderV2.xcdatamodel; sourceTree = "<group>"; };
 		3642922B1B77ED1E00FCEF06 /* GoogleNewsRSSReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleNewsRSSReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3642922F1B77ED1E00FCEF06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		364292301B77ED1E00FCEF06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -303,19 +304,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36410FF81B8468AD00B4C28E /* AppDelegate.swift in Sources */,
 				364292731B78157500FCEF06 /* TFHppleElement.m in Sources */,
 				364292751B78157900FCEF06 /* TFHpple.m in Sources */,
-				3642927B1B785F4500FCEF06 /* GoogleNewsItem.swift in Sources */,
+				363348771B8B0335002BB21F /* Common.swift in Sources */,
+				3633486F1B8B0206002BB21F /* GoogleNewsArticleViewController.swift in Sources */,
 				364292691B780CDB00FCEF06 /* GoogleNewsItemTests.swift in Sources */,
+				363348751B8B0331002BB21F /* RSSParser.swift in Sources */,
 				36410FF91B846D4400B4C28E /* GoogleNewsRSSReader.xcdatamodeld in Sources */,
-				36257BB41B842C2400AC39E5 /* Common.swift in Sources */,
 				364292741B78157700FCEF06 /* XPathQuery.m in Sources */,
-				36C5AADA1B7C7C7B002A4D23 /* GoogleNewsArticleViewController.swift in Sources */,
 				3642924A1B77ED1F00FCEF06 /* GoogleNewsRSSReaderTests.swift in Sources */,
+				363348761B8B0333002BB21F /* GoogleNewsItem.swift in Sources */,
 				36C5AAD91B7C7C2D002A4D23 /* GoogleNewsArticleViewTests.swift in Sources */,
-				3625C92A1B7CD53B0002648D /* RSSTableViewController.swift in Sources */,
-				3625C92B1B7CD8BD0002648D /* RSSParser.swift in Sources */,
+				363348741B8B032E002BB21F /* AppDelegate.swift in Sources */,
+				363348731B8B032C002BB21F /* RSSTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +438,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEFINES_MODULE = NO;
+				DEFINES_MODULE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -456,7 +457,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEFINES_MODULE = NO;
+				DEFINES_MODULE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -551,9 +552,10 @@
 		364292321B77ED1E00FCEF06 /* GoogleNewsRSSReader.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				3628F6E21B89A6A3009E531D /* GoogleNewsRSSReaderV2.xcdatamodel */,
 				364292331B77ED1E00FCEF06 /* GoogleNewsRSSReader.xcdatamodel */,
 			);
-			currentVersion = 364292331B77ED1E00FCEF06 /* GoogleNewsRSSReader.xcdatamodel */;
+			currentVersion = 3628F6E21B89A6A3009E531D /* GoogleNewsRSSReaderV2.xcdatamodel */;
 			path = GoogleNewsRSSReader.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

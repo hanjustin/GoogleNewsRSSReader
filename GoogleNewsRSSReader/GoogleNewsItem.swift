@@ -7,12 +7,20 @@ class GoogleNewsItem: NSManagedObject {
     @NSManaged var title: String
     @NSManaged var descriptionHTML: String
     @NSManaged var pubDate: String
+    @NSManaged var imageData: NSData?
+        
+    var thumbNailImg: UIImage? {
+        get { return imageData == nil ? nil : UIImage(data: imageData!) }
+        set { imageData = UIImageJPEGRepresentation(newValue, 1.0) }
+    }
+    
     var summary: String {
         return getSummaryText()
     }
-    var imgURL: String?
+    var imgURL: String? {
+        return getImgURL()
+    }
     
-    // Init inheritance problem. "use of unimplemented initializer" will happen from core data fetch request. Need to research further.
     convenience init(title: String, descriptionHTML: String, pubDate: String,
                      entity: NSEntityDescription, insertIntoManagedObjectContext context: NSManagedObjectContext) {
         self.init(entity: entity, insertIntoManagedObjectContext: context)
@@ -21,7 +29,6 @@ class GoogleNewsItem: NSManagedObject {
         self.pubDate = pubDate
         
         updateDescriptionHTMLImgURL()
-        setImgURL()
     }
     
     convenience init(title: String, descriptionHTML: String, pubDate: String) {
@@ -35,20 +42,23 @@ class GoogleNewsItem: NSManagedObject {
         descriptionHTML = descriptionHTML.stringByReplacingOccurrencesOfString("<img src=\"//", withString: "<img src=\"http://")
     }
     
-    private func setImgURL() {
+    private func getImgURL() -> String? {
         let imageQueryString = "//table/tr/td[1]/font/a/img"
         if let elements = parseDescriptionHTMLWithXPath(imageQueryString) where elements.count > 0 {
-            imgURL = elements[0].objectForKey("src")
+            return elements[0].objectForKey("src")
         }
+        
+        return nil
     }
     
     private func getSummaryText() -> String {
+        var summaryText = ""
         let descriptionTextQueryString = "//table/tr/td[2]/font/div[2]/font[2]"
         if let elements = parseDescriptionHTMLWithXPath(descriptionTextQueryString) where elements.count > 0 {
-            return elements[0].content
+            summaryText = elements[0].content
         }
         
-        return ""
+        return summaryText
     }
     
     private func parseDescriptionHTMLWithXPath(XPathString: String) -> [TFHppleElement]? {
