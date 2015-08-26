@@ -14,6 +14,7 @@ class GoogleNewsArticleViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.automaticallyAdjustsScrollViewInsets = false
         loadWebViews()
         relatedLinksWebView.delegate = self
         storyArticleWebView.delegate = self

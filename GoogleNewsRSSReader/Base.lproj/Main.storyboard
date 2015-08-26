@@ -61,25 +61,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sO3-se-MvS">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4eR-rU-TTz">
                                 <rect key="frame" x="16" y="72" width="568" height="520"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S6w-Tk-qHn">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2F-Pd-Cd7">
                                 <rect key="frame" x="16" y="72" width="568" height="520"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="sO3-se-MvS" firstAttribute="leading" secondItem="5Rf-ry-uhm" secondAttribute="leadingMargin" id="5bM-4A-pg1"/>
-                            <constraint firstItem="S6w-Tk-qHn" firstAttribute="top" secondItem="k3v-57-UMJ" secondAttribute="bottom" constant="8" symbolic="YES" id="9g4-Eh-59g"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="S6w-Tk-qHn" secondAttribute="trailing" id="M56-oj-1cc"/>
-                            <constraint firstItem="lJe-Ur-K5p" firstAttribute="top" secondItem="sO3-se-MvS" secondAttribute="bottom" constant="8" symbolic="YES" id="XYu-RS-9bp"/>
-                            <constraint firstItem="S6w-Tk-qHn" firstAttribute="leading" secondItem="5Rf-ry-uhm" secondAttribute="leadingMargin" id="afm-Xi-HsO"/>
-                            <constraint firstItem="sO3-se-MvS" firstAttribute="top" secondItem="k3v-57-UMJ" secondAttribute="bottom" constant="8" symbolic="YES" id="cX0-yO-bKC"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="sO3-se-MvS" secondAttribute="trailing" id="gN9-bU-Dhj"/>
-                            <constraint firstItem="lJe-Ur-K5p" firstAttribute="top" secondItem="S6w-Tk-qHn" secondAttribute="bottom" constant="8" symbolic="YES" id="jaw-Iw-Yll"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4eR-rU-TTz" secondAttribute="trailing" id="Bve-8U-DRe"/>
+                            <constraint firstItem="f2F-Pd-Cd7" firstAttribute="trailing" secondItem="5Rf-ry-uhm" secondAttribute="trailingMargin" id="KvE-cG-ZXA"/>
+                            <constraint firstItem="f2F-Pd-Cd7" firstAttribute="top" secondItem="k3v-57-UMJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Qba-fE-aB4"/>
+                            <constraint firstItem="lJe-Ur-K5p" firstAttribute="top" secondItem="f2F-Pd-Cd7" secondAttribute="bottom" constant="8" symbolic="YES" id="Yse-Sv-6Ld"/>
+                            <constraint firstItem="4eR-rU-TTz" firstAttribute="top" secondItem="k3v-57-UMJ" secondAttribute="bottom" constant="8" symbolic="YES" id="db1-Lv-R8t"/>
+                            <constraint firstItem="lJe-Ur-K5p" firstAttribute="top" secondItem="4eR-rU-TTz" secondAttribute="bottom" constant="8" symbolic="YES" id="et1-lo-YYj"/>
+                            <constraint firstItem="4eR-rU-TTz" firstAttribute="leading" secondItem="5Rf-ry-uhm" secondAttribute="leadingMargin" id="qWI-B0-gqM"/>
+                            <constraint firstItem="f2F-Pd-Cd7" firstAttribute="leading" secondItem="5Rf-ry-uhm" secondAttribute="leadingMargin" id="wjF-o6-3Ck"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2A8-4N-vBB">
@@ -90,8 +90,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="relatedLinksWebView" destination="sO3-se-MvS" id="hsb-xA-miI"/>
-                        <outlet property="storyArticleWebView" destination="S6w-Tk-qHn" id="xpJ-MS-Jqv"/>
+                        <outlet property="relatedLinksWebView" destination="4eR-rU-TTz" id="UuP-C1-UfJ"/>
+                        <outlet property="storyArticleWebView" destination="f2F-Pd-Cd7" id="rHd-t5-aPF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Auu-Eu-kJm" userLabel="First Responder" sceneMemberID="firstResponder"/>
